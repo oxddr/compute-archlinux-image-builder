@@ -263,7 +263,7 @@ def AurInstall(name=None, pkbuild_url=None):
 
 
 def Pacstrap(base_dir, params):
-  Run(['pacstrap', base_dir] + params)
+  SudoRun(['pacstrap', base_dir] + params)
 
 
 def Pacman(params, cwd=None):

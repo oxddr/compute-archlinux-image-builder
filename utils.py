@@ -68,7 +68,7 @@ def ReplaceLine(file_path, pattern, replacement):
 
 def SudoRun(params, cwd=None, capture_output=False):
   if os.geteuid() != 0:
-    params = ['sudo'] + params
+    params = ['sudo', "-k"] + params
   return Run(params, capture_output=capture_output)
 
 
